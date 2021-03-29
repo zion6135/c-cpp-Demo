@@ -1,2 +1,1 @@
-# c-cpp-Demo
-C/C++小项目用于练手
+#cocos2dx demo list 
