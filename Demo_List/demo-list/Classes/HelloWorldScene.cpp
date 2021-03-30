@@ -43,7 +43,7 @@ bool HelloWorld::init()
 {
     //////////////////////////////
     // 1. super init first
-    if ( !Scene::init() )
+    if ( !Scene::init() ) //创建一个sence
     {
         return false;
     }
@@ -58,8 +58,8 @@ bool HelloWorld::init()
     // add a "close" icon to exit the progress. it's an autorelease object
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
-                                           "CloseSelected.png",
-                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+                                           "CloseSelected.png",  //按下与不按显示的按键图片
+                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));//这里可理解为注册回调函数
 
     if (closeItem == nullptr ||
         closeItem->getContentSize().width <= 0 ||
@@ -85,7 +85,7 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
 
-    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
+    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);//显示字符串
     if (label == nullptr)
     {
         problemLoading("'fonts/Marker Felt.ttf'");
@@ -97,7 +97,7 @@ bool HelloWorld::init()
                                 origin.y + visibleSize.height - label->getContentSize().height));
 
         // add the label as a child to this layer
-        this->addChild(label, 1);
+        this->addChild(label, 1); //将label作为一个子节点
     }
 
     // add "HelloWorld" splash screen"

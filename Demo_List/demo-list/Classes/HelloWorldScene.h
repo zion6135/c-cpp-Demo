@@ -32,13 +32,13 @@ class HelloWorld : public cocos2d::Scene
 public:
     static cocos2d::Scene* createScene();
 
-    virtual bool init();
+    virtual bool init();  //虚继承--必须Helloworld来写函数
     
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     
     // implement the "static create()" method manually
-    CREATE_FUNC(HelloWorld);
+    CREATE_FUNC(HelloWorld);  //通过宏定义--实际上是运行init()
 };
 
 #endif // __HELLOWORLD_SCENE_H__
