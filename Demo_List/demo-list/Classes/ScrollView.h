@@ -17,11 +17,9 @@ public:
 
 
 	//scroll 委托
-	void scrollViewDidScroll(ScrollView* view);
+	void scrollViewDidScroll(cocos2d::extensions::ScrollView* view);
 	//void scrollViewDidZoom(ScrollView* view);
 	// void scrollViewMoveOver(ScrollView* view);
-    
-
 
 private:
 	Vector<Sprite*> sp_vec;//声明一个容器
